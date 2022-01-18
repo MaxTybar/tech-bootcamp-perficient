@@ -3,11 +3,34 @@ package com.perficient.techbootcampMaxTybar;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
+// import org.junit.jupiter.api.Test;
+
 @SpringBootTest
 class TechbootcampMaxTybarApplicationTests {
 
-	@Test
-	void contextLoads() {
+	TechbootcampMaxTybarApplication TestClass;
+
+	@BeforeEach
+	void setUp() {
+		TestClass = new TechbootcampMaxTybarApplication();
 	}
+
+	@Test
+	@DisplayName("Simple multiplcation should work")
+	void testMultiply() {
+        assertEquals(20, TestClass.multiply(4, 5),     
+                "Regular multiplication should work"); 
+    }
+
+    @RepeatedTest(5)                                    
+    @DisplayName("Ensure correct handling of zero")
+    void testMultiplyWithZero() {
+        assertEquals(0, TestClass.multiply(0, 5), "Multiple with zero should be zero");
+        assertEquals(0, TestClass.multiply(5, 0), "Multiple with zero should be zero");
+    }
 
 }
