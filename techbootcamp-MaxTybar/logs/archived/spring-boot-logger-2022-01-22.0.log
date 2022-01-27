@@ -1,0 +1,135 @@
+2022-01-22 12:32:03,313 INFO org.springframework.boot.StartupInfoLogger [main] Starting TechbootcampMaxTybarApplication using Java 17.0.1 on PRFT-16814 with PID 13752 (C:\Users\Max.Tybar\Dropbox\Perficient, Inc\Java Bootcamp\tech-bootcamp-perficient\techbootcamp-MaxTybar\build\classes\java\main started by max.tybar in C:\Users\Max.Tybar\Dropbox\Perficient, Inc\Java Bootcamp\tech-bootcamp-perficient\techbootcamp-MaxTybar)
+2022-01-22 12:32:03,317 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-01-22 12:32:03,659 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-22 12:32:03,690 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
+2022-01-22 12:32:04,018 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 9191 (http)
+2022-01-22 12:32:04,024 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-9191"]
+2022-01-22 12:32:04,024 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-01-22 12:32:04,024 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-22 12:32:04,098 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-01-22 12:32:04,099 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 754 ms
+2022-01-22 12:32:04,198 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-22 12:32:04,226 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-01-22 12:32:04,324 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-22 12:32:04,394 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-01-22 12:32:04,601 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-01-22 12:32:04,612 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-01-22 12:32:05,071 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [main] alter table products_bought add constraint FKk0qa5sp1yghf5gx0y9j3f0dcb foreign key (product_id) references product (id)
+2022-01-22 12:32:05,080 WARN org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl [main] GenerationTarget encountered exception accepting command : Error executing DDL "alter table products_bought add constraint FKk0qa5sp1yghf5gx0y9j3f0dcb foreign key (product_id) references product (id)" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table products_bought add constraint FKk0qa5sp1yghf5gx0y9j3f0dcb foreign key (product_id) references product (id)" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:581)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:526)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:452)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:263)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:192)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.perficient.techbootcampMaxTybar.TechbootcampMaxTybarApplication.main(TechbootcampMaxTybarApplication.java:15)
+Caused by: java.sql.SQLException: Failed to open the referenced table 'product'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:768)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:653)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 33 common frames omitted
+2022-01-22 12:32:05,081 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-22 12:32:05,086 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-22 12:32:05,317 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-22 12:32:05,473 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-9191"]
+2022-01-22 12:32:05,486 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 9191 (http) with context path ''
+2022-01-22 12:32:05,491 INFO org.springframework.boot.StartupInfoLogger [main] Started TechbootcampMaxTybarApplication in 2.456 seconds (JVM running for 2.69)
+2022-01-22 12:32:29,670 INFO org.apache.juli.logging.DirectJDKLog [http-nio-9191-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-22 12:32:29,670 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9191-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-01-22 12:32:29,671 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9191-exec-1] Completed initialization in 0 ms
+2022-01-22 12:32:29,720 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-9191-exec-1] select product0_.id as id1_1_0_, product0_.name as name2_1_0_, product0_.price as price3_1_0_ from product product0_ where product0_.id=?
+2022-01-22 12:32:29,781 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-9191-exec-1] select buyers0_.product_id as product_1_2_0_, buyers0_.buyer_id as buyer_id2_2_0_, buyer1_.id as id1_0_1_, buyer1_.name as name2_0_1_ from products_bought buyers0_ inner join buyer buyer1_ on buyers0_.buyer_id=buyer1_.id where buyers0_.product_id=?
+2022-01-22 12:32:43,538 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-9191-exec-3] select product0_.id as id1_1_0_, product0_.name as name2_1_0_, product0_.price as price3_1_0_ from product product0_ where product0_.id=?
+2022-01-22 12:32:43,540 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-9191-exec-3] select buyer0_.id as id1_0_0_, buyer0_.name as name2_0_0_ from buyer buyer0_ where buyer0_.id=?
+2022-01-22 12:32:43,547 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-9191-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "com.perficient.techbootcampMaxTybar.entities.Product.connectBuyer(com.perficient.techbootcampMaxTybar.entities.Buyer)" because "retrievedProduct" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.perficient.techbootcampMaxTybar.entities.Product.connectBuyer(com.perficient.techbootcampMaxTybar.entities.Buyer)" because "retrievedProduct" is null
+	at com.perficient.techbootcampMaxTybar.services.ProductService.connectProductToBuyer(ProductService.java:65)
+	at com.perficient.techbootcampMaxTybar.controllers.ProductController.connectProductToBuyer(ProductController.java:58)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-01-22 12:36:10,588 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-9191-exec-5] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.perficient.techbootcampMaxTybar.entities.Product com.perficient.techbootcampMaxTybar.controllers.ProductController.connectProductToBuyer(int,int,com.perficient.techbootcampMaxTybar.controllers.ProductToBuyerRequest)]
+2022-01-22 12:36:54,534 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-9191-exec-7] select product0_.id as id1_1_0_, product0_.name as name2_1_0_, product0_.price as price3_1_0_ from product product0_ where product0_.id=?
+2022-01-22 12:36:54,537 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-9191-exec-7] select buyer0_.id as id1_0_0_, buyer0_.name as name2_0_0_ from buyer buyer0_ where buyer0_.id=?
+2022-01-22 12:36:54,539 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-9191-exec-7] select buyers0_.product_id as product_1_2_0_, buyers0_.buyer_id as buyer_id2_2_0_, buyer1_.id as id1_0_1_, buyer1_.name as name2_0_1_ from products_bought buyers0_ inner join buyer buyer1_ on buyers0_.buyer_id=buyer1_.id where buyers0_.product_id=?
+2022-01-22 12:36:54,540 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-9191-exec-7] select products0_.buyer_id as buyer_id2_2_0_, products0_.product_id as product_1_2_0_, product1_.id as id1_1_1_, product1_.name as name2_1_1_, product1_.price as price3_1_1_ from products_bought products0_ inner join product product1_ on products0_.product_id=product1_.id where products0_.buyer_id=?
+2022-01-22 12:36:54,563 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-9191-exec-7] insert into products_bought (product_id, buyer_id) values (?, ?)
