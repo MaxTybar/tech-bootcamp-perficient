@@ -64,6 +64,15 @@ public class ProductService {
         return productRepository.save(existingProduct);
     }
 
+    public Page<Product> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection) {
+        Sort sort = sortDirection.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortField).ascending() :
+                    Sort.by(sortField).descending();
+        Pageable pageable = PageRequest.of(pageNo - 1, pageSize, sort); 
+
+        return productRepository.findAll(pageable);
+    }
+
+    // - - - - Refactor - - - - -
     public Product connectProductToBuyer(int productId, int buyerId) {
         
         Product retrievedProduct = productRepository.findById(productId).get();
@@ -72,12 +81,5 @@ public class ProductService {
         
         return productRepository.save(retrievedProduct);
     }
-
-    public Page<Product> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection) {
-        Sort sort = sortDirection.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortField).ascending() :
-                    Sort.by(sortField).descending();
-        Pageable pageable = PageRequest.of(pageNo - 1, pageSize, sort); 
-
-        return productRepository.findAll(pageable);
-    }
+    // - - - - - - - - - - - - - -
 }

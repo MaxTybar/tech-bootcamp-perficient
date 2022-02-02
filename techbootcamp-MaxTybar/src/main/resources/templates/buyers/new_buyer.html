@@ -23,11 +23,10 @@
             
             <input type="text" th:field="*{name}" 
             placeholder="Buyer Name" class="form-control mb-4 col-4" /> 
-
-                    
-            <div style="padding-bottom: 18px" th:each="product : ${listProducts}">
-                <input type="radio" name="action" th:text="${product.name}" />
-            </div>
+        
+                <div style="padding-bottom: 18px" th:each="product : ${listProducts}">
+                    <input type="radio" name="action" th:text="${product.name}" />
+                </div>
 
             <button type="submit" class="btn btn-info col-2"> Save Buyer </button>
             
