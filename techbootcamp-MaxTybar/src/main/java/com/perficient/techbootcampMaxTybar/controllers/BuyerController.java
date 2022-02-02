@@ -3,49 +3,40 @@ package com.perficient.techbootcampMaxTybar.controllers;
 import java.util.List;
 
 import com.perficient.techbootcampMaxTybar.entities.Buyer;
+import com.perficient.techbootcampMaxTybar.entities.Product;
 import com.perficient.techbootcampMaxTybar.services.BuyerService;
+import com.perficient.techbootcampMaxTybar.services.ProductService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 public class BuyerController {
     
     @Autowired
     private BuyerService buyerService;
 
-    @PostMapping("/addBuyer")
-    public Buyer addBuyer(@RequestBody Buyer buyer) {
-        return buyerService.saveBuyer(buyer);
+    @Autowired
+    private ProductService productService;
+
+    @GetMapping("/showNewBuyerForm")
+    public String showNewBuyerForm(Model model) {
+        Buyer product = new Buyer();
+        List<Product> listProducts = productService.getProducts();
+
+        model.addAttribute("buyer", product);
+        model.addAttribute("listProducts", listProducts);
+
+        return "buyers/new_buyer";
     }
 
-    @PostMapping("/addBuyers")
-    public List<Buyer> addBuyers(@RequestBody List<Buyer> buyers) {
-        return buyerService.saveBuyers(buyers);
+    @PostMapping("/saveBuyer")
+    public String saveProduct(@ModelAttribute("buyer") Buyer buyer) {
+        buyerService.saveBuyer(buyer);
+
+        return "redirect:/products";
     }
 
-    @GetMapping("/buyers")
-    public List<Buyer> findAllBuyers() {
-        return buyerService.getBuyers();
-    }
-
-    @GetMapping("/buyerById/{id}")
-    public Buyer findBuyerById(@PathVariable int id) {
-        return buyerService.getBuyerById(id);
-    }
-
-    @GetMapping("/buyerByName/{name}")
-    public Buyer findBuyerByName(@PathVariable String name) {
-        return buyerService.getBuyerByName(name);
-    }
-
-    @PutMapping("/updateBuyer")
-    public Buyer updateBuyer(@RequestBody Buyer buyer) {
-        return buyerService.updateBuyer(buyer);
-    }
-
-    @DeleteMapping("/deleteBuyer/{id}")
-    public String deleteBuyer(@PathVariable int id) {
-        return buyerService.deleteBuyer(id);
-    }
 }

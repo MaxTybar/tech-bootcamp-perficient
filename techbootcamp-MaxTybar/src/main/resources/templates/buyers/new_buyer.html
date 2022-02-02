@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Buyer Managment </title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="container">
+    <h1> Buyer Managment </h1>
+    
+    <hr>
+
+    <h2> Save Buyer </h2>
+
+    <div class="container">
+        
+        <form action="#" th:action="@{/saveBuyer}" th:object="${buyer}" method="POST"> 
+            
+            <input type="text" th:field="*{name}" 
+            placeholder="Buyer Name" class="form-control mb-4 col-4" /> 
+
+                    
+            <div style="padding-bottom: 18px" th:each="product : ${listProducts}">
+                <input type="radio" name="action" th:text="${product.name}" />
+            </div>
+
+            <button type="submit" class="btn btn-info col-2"> Save Buyer </button>
+            
+        </form>        
+
+    </div>
+<hr>
+
+<a th:href="@{/products}"> Back to the Product List </a>
+</div>
+</body>
+</html>

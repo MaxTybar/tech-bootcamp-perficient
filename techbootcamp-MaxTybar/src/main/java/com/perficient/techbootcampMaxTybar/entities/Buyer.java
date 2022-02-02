@@ -32,4 +32,5 @@ public class Buyer {
     @JsonIgnore
     @ManyToMany(mappedBy = "buyers")
     private Set<Product> products = new HashSet<Product>();
+
 }

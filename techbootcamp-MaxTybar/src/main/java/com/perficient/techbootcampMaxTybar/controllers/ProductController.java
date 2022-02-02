@@ -34,6 +34,7 @@ public class ProductController {
     public String showFormForUpdate(@PathVariable int id, Model model) {
         Product product = productService.getProductById(id);
         model.addAttribute("product", product);
+
         return "products/update_product";
     }
 

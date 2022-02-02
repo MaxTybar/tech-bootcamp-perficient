@@ -16,8 +16,4 @@ public class TechbootcampMaxTybarApplication {
 		// logger.error("Hello World.");
 	}
 
-	// public int multiply(int a, int b) {
-	// 	return a * b;
-	// }
-
 }

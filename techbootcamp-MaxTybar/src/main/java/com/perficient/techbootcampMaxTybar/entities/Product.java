@@ -38,7 +38,7 @@ public class Product {
         inverseJoinColumns = @JoinColumn(name = "buyer_id")
     )
     private Set<Buyer> buyers = new HashSet<Buyer>();
-
+    
     public void connectBuyer(Buyer buyer) {
         buyers.add(buyer);
     }
